@@ -1,0 +1,8 @@
+{
+  "input": {
+    "audio_url": "https://example.com/audio.wav",
+    "language": "es",
+    "mode": "verbatim",
+    "word_timestamps": true
+  }
+}

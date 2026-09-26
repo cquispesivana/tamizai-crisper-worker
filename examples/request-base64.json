@@ -1,0 +1,9 @@
+{
+  "input": {
+    "audio_base64": "BASE64_AUDIO_HERE",
+    "audio_format": "wav",
+    "language": "es",
+    "mode": "verbatim",
+    "word_timestamps": true
+  }
+}

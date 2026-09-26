@@ -1,0 +1,13 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+audios/
+audio/
+outputs/
+resultados/
+*.wav
+*.mp3
+*.m4a
+*.flac

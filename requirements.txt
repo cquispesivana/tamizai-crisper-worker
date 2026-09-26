@@ -1,0 +1,4 @@
+runpod>=1.7.0,<2
+requests>=2.31.0,<3
+hf_xet>=1.1.0,<2
+crisperwhisper[ct2,convert]==2.0.3

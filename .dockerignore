@@ -1,0 +1,14 @@
+.git
+.venv
+__pycache__
+*.pyc
+.pytest_cache
+.env
+audios
+audio
+outputs
+resultados
+*.wav
+*.mp3
+*.m4a
+*.flac
