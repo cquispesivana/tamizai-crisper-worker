@@ -28,5 +28,6 @@ RUN python3 -m pip install --upgrade pip \
     && python3 -m pip install -r requirements.txt
 
 COPY handler.py .
+COPY rp_handler.py .
 
-CMD ["python3", "-u", "handler.py"]
+CMD ["python3", "-u", "rp_handler.py"]

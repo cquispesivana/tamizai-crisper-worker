@@ -4,6 +4,11 @@ RunPod Serverless worker for TamizAI speech-to-text with CrisperWhisper 2.0.
 
 This repo is intentionally separate from `tamizai-backend`. The backend should keep the scoring pipeline and call this worker over HTTP only when it needs Crisper transcription.
 
+Entrypoint:
+
+- `rp_handler.py` starts the queue-based RunPod worker.
+- `handler.py` contains the transcription logic imported by the entrypoint.
+
 ## Runtime Contract
 
 Preferred request shape:
@@ -108,7 +113,7 @@ docker push TU_USUARIO/tamizai-crisper-worker:latest
 
 ## RunPod Serverless
 
-Create a Serverless endpoint using the pushed image.
+Create a queue-based Serverless endpoint using the pushed image.
 
 Suggested starting point:
 

@@ -7,7 +7,6 @@ from threading import Lock
 from typing import Any
 
 import requests
-import runpod
 
 
 MODEL_ALIASES = {
@@ -231,5 +230,3 @@ def handler(job: dict[str, Any]) -> dict[str, Any]:
             }
         }
 
-
-runpod.serverless.start({"handler": handler})
