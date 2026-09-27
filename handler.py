@@ -26,7 +26,6 @@ DEFAULT_MODE = os.getenv("CRISPER_MODE", "verbatim")
 DEFAULT_WORD_TIMESTAMPS = os.getenv("CRISPER_WORD_TIMESTAMPS", "true").lower() == "true"
 REQUEST_TIMEOUT_SECONDS = int(os.getenv("REQUEST_TIMEOUT_SECONDS", "60"))
 MAX_AUDIO_BYTES = int(os.getenv("MAX_AUDIO_BYTES", str(25 * 1024 * 1024)))
-DOWNLOAD_ROOT = os.getenv("CRISPER_DOWNLOAD_ROOT")
 
 _MODEL: Any | None = None
 _MODEL_LOCK = Lock()
@@ -52,17 +51,11 @@ def get_model() -> Any:
 
         from crisperwhisper import CrisperWhisperModel
 
-        kwargs: dict[str, Any] = {
-            "backend": BACKEND,
-            "device": DEVICE,
-            "compute_type": COMPUTE_TYPE,
-        }
-        if DOWNLOAD_ROOT:
-            kwargs["download_root"] = DOWNLOAD_ROOT
-
         _MODEL = CrisperWhisperModel(
             MODEL_ID,
-            **kwargs,
+            backend=BACKEND,
+            device=DEVICE,
+            compute_type=COMPUTE_TYPE,
         )
         return _MODEL
 

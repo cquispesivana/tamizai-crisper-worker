@@ -84,7 +84,6 @@ Errors are returned as:
 | `CRISPER_BACKEND` | `ct2` | GPU-friendly backend for RunPod. |
 | `CRISPER_DEVICE` | `cuda` | Use `cpu` only for local debugging. |
 | `CRISPER_COMPUTE_TYPE` | `float16` | Recommended for GPU inference. |
-| `CRISPER_DOWNLOAD_ROOT` | empty | Optional explicit model download/cache directory. |
 | `CRISPER_LANGUAGE` | `es` | Default language. |
 | `CRISPER_MODE` | `verbatim` | Keeps hesitations/repetitions for dyslexia-risk speech analysis. |
 | `CRISPER_WORD_TIMESTAMPS` | `true` | Include word timing when available. |
